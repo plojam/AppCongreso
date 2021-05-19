@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ec.edu.ups.appcongreso.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ec.edu.ups.appcongreso.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_loggedFragment"
+            app:destination="@id/loggedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrarFragment"
+        android:name="ec.edu.ups.appcongreso.RegistrarFragment"
+        android:label="RegistrarFragment" >
+        <action
+            android:id="@+id/action_registrarFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="ec.edu.ups.appcongreso.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/loggedFragment"
+        android:name="ec.edu.ups.appcongreso.LoggedFragment"
+        android:label="LoggedFragment" />
+</navigation>
